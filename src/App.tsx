@@ -1,5 +1,11 @@
+import SimpleForm from "./SimpleForm.tsx";
+import {Heading} from "@digdir/designsystemet-react";
+
 export default function App() {
     return (
-        <h1>Testing React Form Hook and Zod</h1>
+        <main>
+            <Heading level={1}>Testing React Form Hook and Zod</Heading>
+            <SimpleForm/>
+        </main>
     )
 }

@@ -1,0 +1,16 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-feature-settings: "cv05" 1; /* Enable lowercase l with tail */
+}
+
+main {
+    margin: 0 auto;
+    max-width: 70ch;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
