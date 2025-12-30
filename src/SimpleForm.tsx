@@ -13,13 +13,14 @@ export default function SimpleForm() {
         handleSubmit,
         watch,
         formState: {errors},
+        reset,
     } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
     console.log(watch("example"));
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} onReset={() => reset()}>
             {Object.keys(errors).length > 0 && (
                 <ErrorSummary>
                     <ErrorSummary.Heading>Please fix errors</ErrorSummary.Heading>
@@ -46,7 +47,10 @@ export default function SimpleForm() {
                 <Input id="exampleRequired2" {...register("exampleRequired2", {required: true})} />
                 {errors.exampleRequired2 && <ValidationMessage>This field is required</ValidationMessage>}
             </Field>
-            <Button type="submit">Send inn</Button>
+            <div className="form-controls">
+                <Button type="submit">Submit</Button>
+                <Button type="reset" variant="secondary">Reset</Button>
+            </div>
         </form>
     )
 }
