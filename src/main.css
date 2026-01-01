@@ -1,23 +1,61 @@
+html {
+    background-color: var(--ds-color-background-tinted);
+}
+
 body {
+    background-color: transparent;
     font-family: "Inter", sans-serif;
     font-feature-settings: "cv05" 1; /* Enable lowercase l with tail */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0.5rem auto;
+    padding: 0 0.5rem;
+    @media (min-width: 65ch) {
+        padding: 0;
+        width: 70ch;
+    }
+}
+
+.main-navigation .container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    a {
+        color: var(--ds-color-text-default);
+    }
 }
 
 main {
-    margin: 0 auto;
-    max-width: 70ch;
+    background-color: var(--ds-color-background-default);
+    padding: 1rem 0 0.5rem;
+
+    .container {
+        margin: 0 auto;
+        max-width: 70ch;
+    }
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin: 1rem 0;
+    margin: 1rem 0 0.5rem;
 }
 
 .form-controls {
     display: flex;
     gap: 0.5rem;
+    flex-direction: column;
+    @media (min-width: 65ch) {
+        flex-direction: row;
+    }
+}
+
+.ds-field {
+    margin-bottom: var(--ds-size-5);
 }
 
 .ds-label {
@@ -28,4 +66,9 @@ form {
 
 .ds-label .ds-tag {
     font-size: 0.8rem;
+    min-height: var(--ds-size-6);
+}
+
+.ds-paragraph {
+    margin: 1rem 0;
 }
