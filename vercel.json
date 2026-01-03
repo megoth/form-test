@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/api/validatePerson.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": "src/types.ts"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "src/api/$1.ts"
+    }
+  ]
+}
