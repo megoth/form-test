@@ -5,7 +5,7 @@ import {
     Field, Heading,
     Input,
     Label,
-    Paragraph,
+    Paragraph, Tag,
     ValidationMessage
 } from "@digdir/designsystemet-react";
 import useFormModel from "../hooks/formModel";
@@ -50,7 +50,10 @@ export default function SimpleForm() {
                     </ErrorSummary>
                 )}
                 <Field>
-                    <Label>Field 1</Label>
+                    <Label>
+                        <span>Field 1</span>
+                        <Tag data-color="warning" variant="outline">Required</Tag>
+                    </Label>
                     <Input {...register("field1", {required: true})} />
                     {errors.field1 && <ValidationMessage>Missing value</ValidationMessage>}
                 </Field>
