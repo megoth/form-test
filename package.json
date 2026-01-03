@@ -12,10 +12,12 @@
   "dependencies": {
     "@digdir/designsystemet-css": "^1.9.0",
     "@digdir/designsystemet-react": "^1.9.0",
+    "@hookform/resolvers": "^5.2.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.69.0",
-    "react-router": "^7.11.0"
+    "react-router": "^7.11.0",
+    "zod": "^4.3.4"
   },
   "devDependencies": {
     "@digdir/designsystemet-types": "^1.9.0",

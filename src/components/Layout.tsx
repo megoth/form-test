@@ -15,6 +15,7 @@ export default function Layout() {
                 <div className="container">
                     <NavLink to="/">Simple form</NavLink>
                     <NavLink to="/complex">Complex form</NavLink>
+                    <NavLink to="/zod">Form w/Zod</NavLink>
                 </div>
             </nav>
             <main>

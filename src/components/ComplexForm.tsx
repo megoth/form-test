@@ -27,6 +27,11 @@ export default function ComplexForm() {
         reset,
     } = useForm<Inputs>()
 
+    const onReset = () => {
+        reset();
+        setData(null);
+    };
+
     return (
         <>
             <Heading level={2}>Complex form</Heading>
@@ -34,10 +39,7 @@ export default function ComplexForm() {
                 This is a somewhat complex form, with one optional and two required fields. Also, the last field is a
                 date field that requires a date set in the future.
             </Paragraph>
-            <form onSubmit={handleSubmit(setData)} onReset={() => {
-                reset();
-                setData(null);
-            }}>
+            <form onSubmit={handleSubmit(setData)} onReset={onReset}>
                 {Object.keys(errors).length > 0 && (
                     <ErrorSummary>
                         <ErrorSummary.Heading>Please fix errors</ErrorSummary.Heading>

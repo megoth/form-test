@@ -7,6 +7,7 @@ import {createBrowserRouter, RouterProvider} from "react-router";
 import SimpleForm from "./components/SimpleForm.tsx";
 import Layout from "./components/Layout.tsx";
 import ComplexForm from "./components/ComplexForm.tsx";
+import ZodForm from "./components/zod/ZodForm.tsx";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path: "/complex",
                 Component: ComplexForm
+            },
+            {
+                path: "/zod",
+                Component: ZodForm
             }
         ]
     },
