@@ -1,9 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
+  "devCommand": "vite dev",
   "functions": {
     "api/validatePerson.ts": {
       "includeFiles": "src/types.ts"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/",
+      "has": []
+    }
+  ]
 }
