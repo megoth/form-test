@@ -1,4 +1,4 @@
-import type {PersonData} from "../../types.ts";
+import type {PersonData} from "../../types";
 import type {FieldError, RegisterOptions, UseFormRegister} from "react-hook-form";
 import {Field, Input, Label, ValidationMessage} from "@digdir/designsystemet-react";
 import type {HTMLProps, ReactNode} from "react";

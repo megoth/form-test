@@ -4,10 +4,10 @@ import "./main.css";
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from "react-router";
-import SimpleForm from "./components/SimpleForm.tsx";
-import Layout from "./components/Layout.tsx";
-import ComplexForm from "./components/ComplexForm.tsx";
-import ZodForm from "./components/zod/ZodForm.tsx";
+import SimpleForm from "./components/SimpleForm";
+import Layout from "./components/Layout";
+import ComplexForm from "./components/ComplexForm";
+import ZodForm from "./components/zod/ZodForm";
 
 const router = createBrowserRouter([
     {

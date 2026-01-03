@@ -1,5 +1,5 @@
 import {type ReactNode, useEffect, useState} from "react";
-import FormModelContext from "./context.tsx";
+import FormModelContext from "./context";
 import {useLocation} from "react-router";
 
 interface Props {

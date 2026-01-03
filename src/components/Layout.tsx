@@ -1,7 +1,7 @@
 import {NavLink, Outlet} from "react-router";
 import {Heading} from "@digdir/designsystemet-react";
-import {FormModelProvider} from "../hooks/formModel/provider.tsx";
-import SubmittedDataViewer from "./SubmittedDataViewer.tsx";
+import {FormModelProvider} from "../hooks/formModel/provider";
+import SubmittedDataViewer from "./SubmittedDataViewer";
 
 export default function Layout() {
     return (

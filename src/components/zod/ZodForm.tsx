@@ -1,9 +1,9 @@
 import {useForm} from "react-hook-form";
-import ZodFormField from "./ZodFormField.tsx";
+import ZodFormField from "./ZodFormField";
 import {Button, ErrorSummary, Heading, Label, Paragraph, Tag} from "@digdir/designsystemet-react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import useFormModel from "../../hooks/formModel";
-import {PersonSchema, type PersonSchemaType} from "../../types.ts";
+import {PersonSchema, type PersonSchemaType} from "../../types";
 
 function ZodForm() {
     const {post, setData, setResponse} = useFormModel();
