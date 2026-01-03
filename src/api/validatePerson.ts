@@ -1,4 +1,4 @@
-import {PersonSchema} from "../types";
+import {PersonSchema} from "../types.ts";
 
 export async function POST(request: Request) {
     const body = await request.json();
