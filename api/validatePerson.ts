@@ -1,9 +1,8 @@
-import {PersonSchema} from "../src/types.ts";
+import {PersonSchema} from "../src/types";
 
 export async function POST(request: Request) {
     const body = await request.json();
     const result = PersonSchema.safeParse(body);
-    console.log(result);
     if (result.success) {
         return Response.json({success: true});
     }
