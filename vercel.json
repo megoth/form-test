@@ -3,7 +3,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/api/validatePerson.ts",
+      "src": "src/api/*.ts",
       "use": "@vercel/node",
       "config": {
         "includeFiles": "src/types.ts"
