@@ -11,7 +11,10 @@ export function FormModelProvider({children}: Props) {
     const [response, setResponse] = useState<Response | null>(null);
     const location = useLocation();
     useEffect(() => {
-        const timeoutId = setTimeout(() => setData(null));
+        const timeoutId = setTimeout(() => {
+            setData(null);
+            setResponse(null);
+        });
         return () => clearTimeout(timeoutId);
     }, [setData, location.pathname]);
     const post = async (url: string, data: Record<string, unknown>) => {

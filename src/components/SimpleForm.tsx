@@ -54,7 +54,7 @@ export default function SimpleForm() {
                         <span>Field 1</span>
                         <Tag data-color="warning" variant="outline">Required</Tag>
                     </Label>
-                    <Input {...register("field1", {required: true})} />
+                    <Input id="field1" {...register("field1", {required: true})} />
                     {errors.field1 && <ValidationMessage>Missing value</ValidationMessage>}
                 </Field>
                 <div className="form-controls">
