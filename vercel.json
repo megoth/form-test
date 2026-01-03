@@ -11,5 +11,11 @@
       "src": "/api/(.*)",
       "dest": "src/api/$1.ts"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
