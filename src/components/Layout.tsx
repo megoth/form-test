@@ -28,6 +28,11 @@ export default function Layout() {
                     <SubmittedDataViewer/>
                 </div>
             </aside>
+            <footer>
+                <div className="container">
+                    Code available at <a href="https://github.com/megoth/form-test">GitHub</a>
+                </div>
+            </footer>
         </FormModelProvider>
     )
 }
